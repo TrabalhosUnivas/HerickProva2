@@ -1,0 +1,61 @@
+package br.univas.edu;
+
+import java.util.Scanner;
+
+public class Questao2 {
+	public static void main(String[] args) {
+		
+	Scanner sc = new Scanner (System.in);
+	int aptoa [] = new int[12];
+	int aptob [] = new int [12];
+	
+	double maior = 0, menor = 0, media = 0;
+	double maior2 = 0, menor2 = 0, media2 = 0;
+	
+	
+	for(int i = 0; i < aptoa.length; i++){
+		System.out.print("Digite o " +(i+1)+"º mes do primeiro apartamento: ");
+		aptoa[i] = sc.nextInt();
+	}
+    for (int i = 1 ; i < aptoa.length; i++){
+            if ( aptoa[i] > maior) {
+                  maior = aptoa[i];
+           }
+      }
+    for (int i = 1; i < aptoa.length; i++) {  
+        if(aptoa[i] < menor){  
+            menor = aptoa[i];  
+        }
+        media = media +aptoa[i];
+    }
+    
+	for(int i = 0; i < aptob.length; i++){
+		System.out.print("Digite o " +(i+1)+"º mes do segundo apartamento: ");
+		aptob[i] = sc.nextInt();
+	}
+    for (int i = 1 ; i < aptoa.length; i++){
+            if ( aptob[i] > maior2) {
+                  maior2 = aptob[i];
+           }
+      }
+    for (int i = 1; i < aptoa.length; i++) {  
+        if(aptob[i] < menor2){  
+            menor = aptob[i];  
+        }
+        media2 = media2 +aptob[i];
+    
+    
+    
+    System.out.println(" Primeiro apartamento");
+	System.out.println("Maior valor "+ maior);
+	System.out.println("Menor valor "+ menor);
+	System.out.println("Media "+ (media /12));
+    System.out.println(" Segundo Apartamento ");
+	System.out.println("Maior valor "+ maior2);
+	System.out.println("Menor valor "+ menor2);
+	System.out.println("Media "+ (media2 /12));
+	
+
+}
+	}	
+}
